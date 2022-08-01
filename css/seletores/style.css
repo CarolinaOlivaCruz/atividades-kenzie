@@ -1,0 +1,21 @@
+#tituloPrincipal{
+    text-align: center;
+}
+
+span {
+    color: rgb(48, 84, 248);
+}
+
+#destaque {
+    background: rgb(48, 84, 248);
+}
+
+ol {
+    text-decoration: underline;
+}
+
+#direitos {
+    color: white;
+    background: black;
+    text-align: center;
+}
