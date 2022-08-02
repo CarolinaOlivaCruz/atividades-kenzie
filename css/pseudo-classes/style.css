@@ -1,0 +1,79 @@
+
+/* backgroud rgb(248 249 250)
+color rgb(16 16 16)
+
+backgroud input rgb(233 236 239)
+color rgb(62 63 63) 
+
+backgroud button rgb(24 100 171)
+color rgb(255 255 255)
+border rgb(12 50 85)
+*/
+body {
+    text-align: center;
+    margin: 10%;
+
+}
+
+fieldset {
+ border: 2px solid rgba(186, 186, 187, 0.158);
+ border-radius: 5px;
+ background-color: rgb(248 249 250);
+}
+
+.formulario {
+   color: rgb(16 16 16);
+   display: inline-block;
+}
+
+.formulario span, .formulario input[type="email-input"], .formulario input[type="button"] {
+    display: block;
+}
+
+.formulario span {
+    margin-top: 15%;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.formulario label {
+    margin: 20% 80% -6% 3%;
+    display: block;
+    font-size: 11px;
+}
+
+
+#email-input {
+    background-color: #E9ECEF;
+    color:  rgb(62 63 63); 
+    padding: 5% 7% 3% 7%;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+#email-input:hover {
+    background-color: #DEE2E6;
+}
+
+#email-input:hover {
+    border-color: #000000;
+    background-color: #FFFFFF; 
+}
+
+#button {
+    background-color: #1971C2;;
+    color: rgb(255 255 255);
+    border: rgb(12 50 85);
+    padding: 4% 36% 4% 36%;
+    margin: 8% 2% 8% 2%;
+    border-radius: 5px;
+}
+
+#button:hover {
+background-color: #1864AB;
+}
+
+#button:focus {
+    border-color: #000000;;
+}
