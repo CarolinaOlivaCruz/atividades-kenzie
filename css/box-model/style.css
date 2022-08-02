@@ -1,25 +1,36 @@
 
+body {
+  background-color: #212529;
+ font-family: 'Roboto Slab', serif;
+}
 nav {
-    padding: 0;
-    margin: -1%;
-    background: rgb(202, 222, 224);
+    padding: 1%;
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background:#ffffff;
+    border: 2px;
+    border-radius: 20px;
 }
 ul{
     list-style: none;
     font-size: 0;
     padding: 0;
     margin: 0;
+    
     text-align: center;
   }
 
   ul li{
     
     display: inline-block;
-    border: rgb(57, 9, 88) 2px solid;
-    border-radius: 50px;
+    border: rgb(238, 236, 240);
     padding: 1%;
-    margin: 2%;
-    background-color: rgb(159, 46, 235);
+    margin: 1%;
+    background-color: #5005F2;
+    box-shadow: 0 2px #cccccc;
+    margin-top: 5%;
+    margin-bottom: auto;
   }
 
   ul li a{
