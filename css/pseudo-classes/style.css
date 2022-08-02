@@ -1,4 +1,3 @@
-
 /* backgroud rgb(248 249 250)
 color rgb(16 16 16)
 
@@ -12,21 +11,22 @@ border rgb(12 50 85)
 body {
     text-align: center;
     margin: 10%;
-
 }
 
 fieldset {
- border: 2px solid rgba(186, 186, 187, 0.158);
- border-radius: 5px;
- background-color: rgb(248 249 250);
+    border: 2px solid rgba(186, 186, 187, 0.158);
+    border-radius: 5px;
+    background-color: rgb(248 249 250);
 }
 
 .formulario {
-   color: rgb(16 16 16);
-   display: inline-block;
+    color: rgb(16 16 16);
+    display: inline-block;
 }
 
-.formulario span, .formulario input[type="email-input"], .formulario input[type="button"] {
+.formulario span,
+.formulario input[type="email-input"],
+.formulario input[type="button"] {
     display: block;
 }
 
@@ -41,11 +41,10 @@ fieldset {
     display: block;
     font-size: 11px;
 }
-
-
+                                                                                                                          
 #email-input {
     background-color: #E9ECEF;
-    color:  rgb(62 63 63); 
+    color: rgb(62 63 63);
     padding: 5% 7% 3% 7%;
     margin: 0;
     border: 0;
@@ -56,13 +55,13 @@ fieldset {
     background-color: #DEE2E6;
 }
 
-#email-input:hover {
+#email-input:focus {
     border-color: #000000;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
 }
 
 #button {
-    background-color: #1971C2;;
+    background-color: #1971C2;
     color: rgb(255 255 255);
     border: rgb(12 50 85);
     padding: 4% 36% 4% 36%;
@@ -71,9 +70,9 @@ fieldset {
 }
 
 #button:hover {
-background-color: #1864AB;
+    background-color: #1864AB;
 }
 
 #button:focus {
-    border-color: #000000;;
+    border-color: #000000;
 }
