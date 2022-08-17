@@ -31,30 +31,41 @@ const tiposDiversos2 = [true, "String", "boolen", '10'];
 
 function qualTipoDeElemento(lista) {
 
+    let result = [];
+
     let verifica1 = lista[0];
     if (typeof verifica1 === 'number') {
-        return true;
-    } 
+       result.push(true);
+    } else{
+      result.push(false)
+    }
 
     let verifica2 = lista[1];
     if (typeof verifica2 === 'number') {
-        return true;
-    } 
-    
+       result.push(true);
+    } else{
+      result.push(false)
+    }
+
     let verifica3 = lista[2];
     if (typeof verifica3 === 'number') {
-        return true;
+       result.push(true);
+    } else{
+      result.push(false)
     }
 
     let verifica4 = lista[3];
     if (typeof verifica4 === 'number') {
-        return true;
+       result.push(true);
+    } else{
+      result.push(false)
     }
+    
+    return result;
 }
+
 console.log(qualTipoDeElemento(tiposDiversos));
-// console.log(qualTipoDeElemento(tiposDiversos2));
-
-
+console.log(qualTipoDeElemento(tiposDiversos2));
 
 
 // Ex.2
