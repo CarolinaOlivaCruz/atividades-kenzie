@@ -20,9 +20,6 @@ console.log(`Quem está na posição ${posicoesDoPodio[4]} é ${nomeDosCompetido
 
 
 
-
-
-
 // S4-11 | 💪 Atividades - Arrays: Verificando dados
 
 // Ex.1
@@ -66,6 +63,7 @@ function qualTipoDeElemento(lista) {
 
 console.log(qualTipoDeElemento(tiposDiversos));
 console.log(qualTipoDeElemento(tiposDiversos2));
+
 
 
 // Ex.2
