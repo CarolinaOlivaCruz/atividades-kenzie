@@ -14,27 +14,27 @@ let garden = [
 
 function trimTheGrass(arrayGrama) {
 
-    let ArrayGramaCortada = [];
+    let arrayGramaCortada = [];
 
-    for (i = 0; i < arrayGrama.length; i++) {
 
-        let arrayAtual = arrayGrama[i];
+    for (let i = 0; i < arrayGrama.length; i++) {
 
-        for (let j = 0; j < arrayAtual.length; j++) {
+        let listaGrama = [];
 
-            let elementosArrayAtual = arrayAtual[j];
+        for (let j = 0; j < arrayGrama[i].length; j++) {
 
-            if (elementosArrayAtual === 0) {
-                ArrayGramaCortada.push(elementosArrayAtual);
+            if (arrayGrama[i][j] === 0) {
+                listaGrama.push(arrayGrama[i][j]);
             }
-            if (elementosArrayAtual === 'G') {
-                ArrayGramaCortada.push(0);
+            else if (arrayGrama[i][j] === 'G') {
+                listaGrama.push(0);
             }
         }
-        return ArrayGramaCortada;
+        
+       arrayGramaCortada.push(listaGrama);
 
     }
-
+    return arrayGramaCortada;
 
 }
-console.log(trimTheGrass([garden]))
+console.log(trimTheGrass(garden))
