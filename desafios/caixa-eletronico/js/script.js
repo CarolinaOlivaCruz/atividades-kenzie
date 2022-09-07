@@ -1,4 +1,3 @@
-
 const user = {
     name: 'Jhon Doyle Fox',
     savingsBalance: 500,
@@ -11,32 +10,87 @@ const user = {
     ]
 }
 
-// 1 - Saque
-// 2 - Saldo
-// 3 - Depósito
 
 
-// sacar da poupança ou do limite de crédito
-// não deve permitir a entrada de valores negativos
-// não se pode realizar saques abaixo de R$ 5,00
-// O caixa não realiza saques de valores com casa flutuante
 
-function makeWithDrawal() {
+let opcoes = prompt('Digite 1 para Saque, 2 para Saldo ou 3 para Depósito');
+
+
+function escolhaExecute(opcoesDisponiveis, user) {
 
     let responseWithDraw = prompt('Digite 1 para poupança ou 2 para crédito');
     let withdrawalAmount = parseInt(prompt('Qual o valor do saque?'));
+    let responseBalance = prompt('Digite 1 para poupança ou 2 para crédito');
+    let valueForDeposit = parseInt(prompt('Qual será o valor do deposito?'));
 
-    if (withdrawalAmount < 0 && withdrawalAmount < 5) {
+    if (opcoesDisponiveis === '1') {
+        return makeWithDrawal(user, withdrawalAmount, responseWithDraw)
+    } else if (opcoesDisponiveis === '2') {
+        return getBalance(responseBalance, user)
+    } else if (opcoesDisponiveis === '3') {
+        return makeDeposit(user, valueForDeposit);
+    }
+
+}
+
+
+
+console.log(escolhaExecute(opcoes, user));
+
+
+
+
+
+
+function makeWithDrawal(usuario, valorSaque, tipoConta) {
+
+    if (valorSaque < 0 && valorSaque < 5) {
         return 'Não pode efetuar saque';
     }
 
-    if (user.savingsBalance >= withdrawalAmount && responseWithDraw === '1') {
-        user.savingsBalance -= withdrawalAmount
-        alert(`Withdrawal carried out, your current balance is ${user.savingsBalance}`);
-    } else if (user.cardsInformation[0].creditBalance >= withdrawalAmount && responseWithDraw === '2') {
-        alert(`Withdrawal carried out, your current balance is ${user.savingsBalance}`);
-    } else if(responseWithDraw !== '1' || responseWithDraw !== '2' && user.savingsBalance < withdrawalAmount){
+    if (tipoConta === '1' && usuario.savingsBalance >= valorSaque) {
+        usuario.savingsBalance -= valorSaque;
+        alert('Withdrawal carried out');
+    } else if (tipoConta === '2' && usuario.cardsInformation[0].creditBalance >= valorSaque) {
+        alert('Withdrawal carried out');
+    } else if ((tipoConta !== '1' || responseWithDraw !== '2') && usuario.savingsBalance < valorSaque) {
         alert('non-existing account or insufficient balance');
     }
 }
-    console.log(makeWithDrawal());
+console.log(makeWithDrawal());
+
+
+
+
+
+function getBalance(tipoConta, usuario) {
+
+    let balance = 0;
+
+    if (tipoConta === '1') {
+        balance = usuario.savingsBalance;
+        alert(`Seu saldo é ${balance},00`);
+    } else if (tipoConta === '2') {
+        balance = usuario.cardsInformation[0].creditBalance;
+        alert(`Seu saldo é ${balance},00`);
+    }
+}
+
+console.log(getBalance());
+
+
+
+
+
+
+function makeDeposit(usuario, valorDeposito) {
+
+        if (valorDeposito < 0 && valorDeposito < 5 && valorDeposito > 500) {
+            return 'This value is not allowed';
+        } else {
+            usuario.savingsBalance += valorDeposito;
+        }
+    
+}
+
+console.log(makeDeposit(user, valueForDeposit));
